@@ -1,6 +1,6 @@
 # S.T.A.L.K.E.R. Тайна Станции Дуга - Промо страница аудиокниги
 
-![Preview](assets/images/preview.jpg)
+![Preview](https://avatars.mds.yandex.net/i?id=e01ef9bfa274d27464455c3477ab0af2_sr-4805918-images-thumbs&n=13)
 
 Промо-страница аудиокниги "S.T.A.L.K.E.R. Тайна Станции Дуга" Артёма Бушуева в стиле вселенной S.T.A.L.K.E.R. с акцентом на аудиоформат. Страница полностью адаптирована для размещения на GitHub Pages.
 
@@ -34,9 +34,3 @@
 - **Оптимизация**:
   - Ленивая загрузка
   - Адаптивные изображения
-
-## Установка и запуск
-
-1. Клонировать репозиторий:
-```bash
-git clone https://github.com/ваш-username/stalker-audiobook-promo.git
