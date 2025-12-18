@@ -115,7 +115,7 @@ a:hover {
 }
  
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://wallpapers.com/images/hd/stalker-watch-tower-yiu673pzetcora0d.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
