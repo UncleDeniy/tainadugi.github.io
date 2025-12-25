@@ -273,9 +273,15 @@ function setLang(lang) {
     document.documentElement.dataset.lang = safe;
     localStorage.setItem(LANG_KEY, safe);
 
-    const dict = I18N[safe];
-    const val = dict && dict[key];
-    if (typeof val === "string") el.textContent = val;
+    $$('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      const dict = I18N[safe];
+      const val = dict && dict[key];
+      if (typeof val === "string") {
+          el.textContent = val;
+      }
+    });
+
 
     // Title + meta description refresh
     const title = safe === "ru" ? "S.T.A.L.K.E.R. — Тайна Станции Дуга | Аудиокнига" : "S.T.A.L.K.E.R. — The Secret of the Duga Station | Audiobook";
