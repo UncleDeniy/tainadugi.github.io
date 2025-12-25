@@ -37,23 +37,28 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   const req = event.request;
+ 
   if (req.method !== "GET") return;
-  const url = new URL(req.url);
-
-  // Only cache same-origin requests
-  if (url.origin !== self.location.origin) return;
+ 
+  if (req.headers.has("range")) {
+    event.respondWith(fetch(req));
+    return;
+  }
 
   event.respondWith(
     caches.match(req).then((cached) => {
       if (cached) return cached;
-      return fetch(req)
-        .then((res) => {
-          // Cache successful responses
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+
+      return fetch(req).then((res) => { 
+        if (!res || res.status !== 200 || res.type === "opaque") {
           return res;
-        })
-        .catch(() => cached);
+        }
+
+        const copy = res.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+        return res;
+      }).catch(() => cached);
     })
   );
 });
+
