@@ -34,7 +34,7 @@ const I18N = {
         pill_atmo: "Постапокалипсис",
         pill_action: "Напряжение",
 
-        cta_listen: "Слушать / Читать",
+        cta_listen: "Слушать",
         cta_platforms: "Платформы",
         cta_support: "Поддержать",
         cta_scroll: "Что внутри",
@@ -43,7 +43,7 @@ const I18N = {
         listen_desc: "Плеер запоминает прогресс на устройстве. Добавьте главы — получите полноценный плейлист.",
         player_now: "Сейчас:",
         player_play: "▶",
-        player_pause: "❚❚ Пауза",
+        player_pause: "❚❚",
         player_prev: "Пред.",
         player_next: "След.",
         player_add: "Как добавить главы?",
@@ -105,22 +105,23 @@ const I18N = {
         platform_b: "Слушать на YouTube",
         platform_contact: "Заказать/связаться",
 
-        support_title: "Поддержать проект",
-        support_p: "Добавьте ссылки на донат/подписку. Мы оставили готовые кнопки и подсказки.",
+        support_title: "Книга бесплатная",
+        support_p: "Скачайте или читайте онлайн — поддержка не требуется. Поделитесь ссылкой, если хотите.",
         support_btn1: "Донат",
         support_btn2: "Boosty / Patreon",
 
-        donate: "Донат (добавьте ссылку)",
-        telegram: "Telegram (добавьте ссылку)",
+        donate: "Скачать книгу",
+        telegram: "Читать онлайн",
 
+        micro_note: "Подсказка: можно добавить обложку и главы — смотрите FAQ ниже.",
 
-        faq_title: "FAQ",
-        faq_q1: "Плеер не воспроизводит",
-        faq_a1: "Проверьте путь к файлам в TRACKS и попробуйте другой браузер. На iOS автоплей запрещён — нужен клик по кнопке Play.",
-        faq_q2: "Можно ли добавить обложку и OG-картинку?",
-        faq_a2: "Да. Положите файл assets/images/og-cover.jpg (1200×630) и обновите meta-теги в <head>.",
-        faq_q3: "Как добавить главы в плейлист?",
-        faq_a3: "Откройте script.js и добавьте треки в массив TRACKS (название + файл). Плеер построит список автоматически.",
+        faq_title: "FAQ по книге",
+        faq_q1: "Книга действительно бесплатная?",
+        faq_a1: "Да. Вы можете слушать и читать её бесплатно. Покупка и донат не требуются.",
+        faq_q2: "О чём «Тайна Станции Дуга»?",
+        faq_a2: "Атмосферная история в духе S.T.A.L.K.E.R.: Зона, тайны «Дуги», сталкеры и выбор, который меняет всё.",
+        faq_q3: "Это официальная книга от GSC?",
+        faq_a3: "Нет. Это фанатское произведение по мотивам вселенной S.T.A.L.K.E.R. S.T.A.L.K.E.R. — торговая марка GSC Game World.",
 
         contacts_title: "Контакты и соцсети",
         contacts_h: "Связаться",
@@ -154,7 +155,7 @@ const I18N = {
         pill_atmo: "Post-apocalyptic",
         pill_action: "Tension",
 
-        cta_listen: "Listen / Read",
+        cta_listen: "Listen",
         cta_platforms: "Platforms",
         cta_support: "Support",
         cta_scroll: "What’s inside",
@@ -163,7 +164,7 @@ const I18N = {
         listen_desc: "The player remembers progress on this device. Add chapters to turn it into a full playlist.",
         player_now: "Now:",
         player_play: "▶",
-        player_pause: "❚❚ Pause",
+        player_pause: "❚❚",
         player_prev: "Prev",
         player_next: "Next",
         player_add: "How to add chapters?",
@@ -225,22 +226,23 @@ const I18N = {
         platform_b: "Listen on YouTube",
         platform_contact: "Request / contact",
 
-        support_title: "Support the project",
-        support_p: "Add your donate / subscription links. Buttons are ready to go.",
+        support_title: "The book is free",
+        support_p: "Download or read online — no support needed. Share the link if you’d like.",
         support_btn1: "Donate",
         support_btn2: "Boosty / Patreon",
 
-        donate: "Donate (add your link)",
-        telegram: "Telegram (add your link)",
+        donate: "Download the book",
+        telegram: "Read online",
 
+        micro_note: "Tip: you can add a cover and chapters — see FAQ below.",
 
-        faq_title: "FAQ",
-        faq_q1: "Player won’t play",
-        faq_a1: "Check TRACKS paths and try another browser. On iOS autoplay is blocked — you must press Play.",
-        faq_q2: "Can I add a cover & OG image?",
-        faq_a2: "Yes. Put assets/images/og-cover.jpg (1200×630) and update the meta tags in <head>.",
-        faq_q3: "How do I add chapters to the playlist?",
-        faq_a3: "Open script.js and add tracks to TRACKS (title + file). The list builds automatically.",
+        faq_title: "Book FAQ",
+        faq_q1: "Is the book really free?",
+        faq_a1: "Yes. You can listen and read for free. No purchase or donations are required.",
+        faq_q2: "What is “The Secret of the Duga Station” about?",
+        faq_a2: "A gritty S.T.A.L.K.E.R.-style story: the Zone, the secrets of “Duga”, stalkers, and a choice that changes everything.",
+        faq_q3: "Is this an official GSC book?",
+        faq_a3: "No. This is a fan work inspired by the S.T.A.L.K.E.R. universe. S.T.A.L.K.E.R. is a trademark of GSC Game World.",
 
         contacts_title: "Contacts & socials",
         contacts_h: "Get in touch",
@@ -273,7 +275,8 @@ function setLang(lang) {
 
     $$('[data-i18n]').forEach((el) => {
         const key = el.getAttribute("data-i18n");
-        const val = I18N[safe] ? .[key];
+        const dict = I18N[safe];
+        const val = dict ? dict[key] : undefined;
         if (typeof val === "string") el.textContent = val;
     });
 
@@ -285,8 +288,8 @@ function setLang(lang) {
         desc.setAttribute(
             "content",
             safe === "ru" ?
-            "Аудиокнига во вселенной S.T.A.L.K.E.R.: исчезнувшая экспедиция, станция Дуга и смертельные тайны Зоны. Слушайте отрывок, выбирайте платформу." :
-            "A S.T.A.L.K.E.R.-flavored audiobook: a missing expedition, the Duga station, and deadly secrets of the Zone. Listen to a sample, pick a platform."
+            "Аудиокнига во вселенной S.T.A.L.K.E.R.: исчезнувшая экспедиция, станция Дуга и смертельные тайны Зоны. Слушайте отрывок, выбирайте платформу и поддержите автора." :
+            "A S.T.A.L.K.E.R.-flavored audiobook: a missing expedition, the Duga station, and deadly secrets of the Zone. Listen to a sample, pick a platform, and support the author."
         );
     }
 
@@ -297,7 +300,7 @@ function setLang(lang) {
 // ---------- Audio / playlist ----------
 // Add chapters here (title + file). Keep files in /assets/audio/
 const TRACKS = [
-    { title: "Отрывок / Sample", src: "assets/audio/sample.mp3" }
+    { title: "Отрывок / Sample", src: "assets/audio/sample.mp3", start: 0, end: 75 }
 ];
 
 const audio = $("#book-audio");
@@ -323,18 +326,27 @@ function formatTime(seconds) {
 
 let currentIndex = 0;
 let userIsScrubbing = false;
+let currentEnd = null; // seconds, for excerpts
+let currentStart = 0;
 
 function setTrack(index, { autoplay = false, seekTo = 0 } = {}) {
     const i = Math.max(0, Math.min(TRACKS.length - 1, index));
     currentIndex = i;
     const t = TRACKS[i];
+    currentStart = Number.isFinite(t.start) ? t.start : 0;
+    currentEnd = Number.isFinite(t.end) ? t.end : null;
     audio.src = t.src;
     nowTitle.textContent = t.title;
     updateActiveTrack();
 
     const onMeta = () => {
         durTimeEl.textContent = formatTime(audio.duration);
-        if (seekTo > 0 && seekTo < audio.duration) audio.currentTime = seekTo;
+        const desired = Math.max(currentStart || 0, seekTo || 0);
+        if (desired > 0 && desired < audio.duration) audio.currentTime = desired;
+        if (currentEnd && currentEnd < audio.duration) {
+            // ensure we don't start beyond the excerpt end
+            if (audio.currentTime >= currentEnd) audio.currentTime = Math.max(0, currentEnd - 0.5);
+        }
         if (autoplay) audio.play().catch(() => {});
         audio.removeEventListener("loadedmetadata", onMeta);
     };
@@ -381,7 +393,7 @@ function saveState() {
                 ts: Date.now()
             })
         );
-    } catch {
+    } catch (e) {
         // ignore
     }
 }
@@ -393,7 +405,7 @@ function loadState() {
         const s = JSON.parse(raw);
         if (!s || typeof s.idx !== "number") return null;
         return s;
-    } catch {
+    } catch (e) {
         return null;
     }
 }
@@ -403,6 +415,10 @@ function updateProgress() {
     const p = (audio.currentTime / audio.duration) * 100;
     progress.value = String(Math.max(0, Math.min(100, p)));
     curTimeEl.textContent = formatTime(audio.currentTime);
+    if (currentEnd && audio.currentTime >= currentEnd) {
+        audio.pause();
+        audio.currentTime = Math.max(currentStart || 0, currentEnd - 0.01);
+    }
     saveState();
 }
 
@@ -411,6 +427,10 @@ function seekFromProgress() {
     const p = Number(progress.value || 0) / 100;
     audio.currentTime = p * audio.duration;
     curTimeEl.textContent = formatTime(audio.currentTime);
+    if (currentEnd && audio.currentTime >= currentEnd) {
+        audio.pause();
+        audio.currentTime = Math.max(currentStart || 0, currentEnd - 0.01);
+    }
     saveState();
 }
 
@@ -452,7 +472,7 @@ function setupCopyLink() {
         try {
             await navigator.clipboard.writeText(url);
             hint.textContent = getLang() === "ru" ? "Ссылка скопирована ✔" : "Link copied ✔";
-        } catch {
+        } catch (e) {
             hint.textContent = getLang() === "ru" ? "Не удалось. Скопируйте вручную." : "Could not copy. Please copy manually.";
         }
         setTimeout(() => (hint.textContent = ""), 2200);
@@ -465,9 +485,9 @@ function setupScanToggle() {
     const saved = localStorage.getItem(key);
     const on = saved ? saved === "1" : true;
     document.body.classList.toggle("scanlines", on);
-    btn ? .setAttribute("aria-pressed", String(on));
+    if (btn) btn.setAttribute("aria-pressed", String(on));
 
-    btn ? .addEventListener("click", () => {
+    if (btn) btn.addEventListener("click", () => {
         const nextOn = !document.body.classList.contains("scanlines");
         document.body.classList.toggle("scanlines", nextOn);
         btn.setAttribute("aria-pressed", String(nextOn));
@@ -477,7 +497,7 @@ function setupScanToggle() {
 
 function setupLangToggle() {
     const btn = $("#langToggle");
-    btn ? .addEventListener("click", () => {
+    if (btn) btn.addEventListener("click", () => {
         const next = getLang() === "ru" ? "en" : "ru";
         setLang(next);
         // Refresh play button label after i18n
@@ -522,6 +542,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Player controls
     btnPlay.addEventListener("click", () => {
         if (audio.paused) {
+            // If excerpt ended, restart from excerpt start
+            if (currentEnd && audio.currentTime >= currentEnd - 0.05) audio.currentTime = currentStart || 0;
             audio.play().catch(() => {});
         } else {
             audio.pause();
@@ -553,7 +575,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Playlist UI toggle
-    togglePlaylist ? .addEventListener("click", () => {
+    if (togglePlaylist) togglePlaylist.addEventListener("click", () => {
         const expanded = togglePlaylist.getAttribute("aria-expanded") === "true";
         togglePlaylist.setAttribute("aria-expanded", String(!expanded));
         playlistWrap.hidden = expanded;
