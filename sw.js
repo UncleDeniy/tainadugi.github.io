@@ -1,4 +1,4 @@
-/* Simple cache-first service worker for GitHub Pages */
+
 const CACHE_NAME = "duga-pda-v1";
 const ASSETS = [
   "./",
