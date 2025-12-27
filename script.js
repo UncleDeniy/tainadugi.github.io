@@ -1,16 +1,8 @@
-/*
-  PDA promo page — improvements:
-  - RU/EN i18n toggle
-  - Playlist-based audio player + resume position (localStorage)
-  - Accessible controls + keyboard friendly
-  - Scanlines toggle
-  - Service worker registration (caching)
-*/
+
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-// ---------- i18n ----------
 const I18N = {
     ru: {
         skip: "Перейти к содержимому",
@@ -44,8 +36,8 @@ const I18N = {
         player_now: "Сейчас:",
         player_play: "▶",
         player_pause: "❚❚",
-        player_prev: "Пред.",
-        player_next: "След.",
+        player_prev: "⇚",
+        player_next: "⇛",
         player_add: "Как добавить главы?",
         player_add_hint: "В script.js: массив TRACKS (название + файл).",
 
@@ -165,8 +157,8 @@ const I18N = {
         player_now: "Now:",
         player_play: "▶",
         player_pause: "❚❚",
-        player_prev: "Prev",
-        player_next: "Next",
+        player_prev: "⇚",
+        player_next: "⇛",
         player_add: "How to add chapters?",
         player_add_hint: "In script.js: edit TRACKS (title + file).",
 
